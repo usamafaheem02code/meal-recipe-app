@@ -19,3 +19,8 @@ A simple, responsive meal recipe web application built using **HTML**, **Tailwin
 
 ---
 
+## Screenshot
+
+<img width="947" alt="image" src="https://github.com/user-attachments/assets/02b52919-e50f-4359-9462-ff57af2aafe4" />
+
+
