@@ -3,163 +3,148 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>foodePK </title>
+    <title>foodePK - About</title>
+    <link rel="icon" href="./images/foodepk-removebg-preview.png" type="image/x-icon" />
+    
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
-    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="./Style.css/index.css" />
   </head>
   <body>
-    <!-- navbar section start  -->
+    <!-- Navbar Start -->
     <nav class="w-full">
       <div class="flex justify-between items-center px-5">
-        <!-- logo section -->
+        <!-- Logo -->
         <section>
           <a href="./index.html">
-            <img class="w-52" src="./foodepk-removebg-preview.png" alt="" />
+            <img class="w-52" src="./images/foodepk-removebg-preview.png" alt="foodepk logo" />
           </a>
         </section>
-        <!-- navlink section -->
 
-        <button
-          id="btnClick"
-          class="block sm:hidden cursor-pointer"
-          onclick="clickButton() ; return false"
-        >
+        <!-- Mobile Menu Button -->
+        <button id="btnClick" class="block sm:hidden cursor-pointer" onclick="clickButton(); return false;">
           <i class="bi bi-menu-button-wide"></i>
         </button>
 
+        <!-- Desktop Menu -->
         <ul class="hidden sm:flex space-x-4">
           <li><a href="./index.html">All Recipes</a></li>
           <li><a href="./about.html">About</a></li>
-          <li >  <a class="bg-black px-5 rounded-lg py-2 text-white" href="./searchpage.html"> Go & Search  <i class="bi bi-search ml-2"></i></a></a></li>
-          <!-- <li><a href="./searchpage.html"><i class="bi bi-search"></i></a></li> -->
           <li>
-            <a href="./index.html"><i class="bi bi-three-dots-vertical"></i></a>
+            <a class="bg-black px-5 rounded-lg py-2 text-white" href="./searchpage.html">
+              Go & Search <i class="bi bi-search ml-2"></i>
+            </a>
           </li>
+          <li><a href="#"><i class="bi bi-three-dots-vertical"></i></a></li>
         </ul>
       </div>
 
+      <!-- Mobile Menu -->
       <div class="sm:hidden hidden mobile-menu space-x-4 px-9" id="mobile-menu">
         <div class="flex flex-col gap-5 my-4 text-center">
-
-     
-        <a href="./index.html">All Recipes</a>
-        <a href="">About</a>
-        <div class="flex justify-center items-center gap-5">
-          <a class="bg-black px-5 rounded-lg py-2 text-white" href="./searchpage.html"> Go & Search  <i class="bi bi-search ml-2"></i></a></a>
-       </div>
-        
-            <!-- <a href=""><i class="bi bi-three-dots-vertical"></i></a> -->
-             </div>
-        
-      </div>
-    </nav>
-
-    
-     
-   <!-- About Section -->
-  <section class="max-w-5xl mx-auto px-6 py-12">
-    <h1 class="text-4xl font-bold mb-6 text-center text-gray-600">About Us</h1>
-
-    <p class="text-lg leading-relaxed mb-6">
-      Welcome to <span class="font-semibold text-black">foodePK</span> — your go-to destination for discovering mouth-watering recipes from around the world. Whether you're a home cook or just someone who loves exploring food online, our platform brings the flavors of every kitchen right to your screen.
-    </p>
-
-    <p class="text-lg leading-relaxed mb-6">
-      We believe that food connects people. That’s why our mission is simple: <span class="italic">"make cooking easy, fun, and accessible for everyone."</span> From traditional dishes to modern fusion meals, we have something for every taste.
-    </p>
-
-    <p class="text-lg leading-relaxed mb-6">
-      Our team continuously explores new meals, collects top-rated recipes, and helps you find exactly what you're craving. Use our powerful search to discover meals by name and get all the details — from ingredients to step-by-step preparation.
-    </p>
-
-    <div class="bg-gray-100 p-6 rounded-xl shadow-md mt-10">
-      <h2 class="text-2xl font-bold text-gray-700 mb-3">Why Choose Us?</h2>
-      <ul class="list-disc list-inside text-gray-700 space-y-2">
-        <li>1000+ Verified and Delicious Recipes</li>
-        <li>Quick and Easy Search Experience</li>
-        <li>Clean, User-Friendly Interface</li>
-        <li>Completely Free to Use</li>
-      </ul>
-    </div>
-
-    <p class="text-center mt-10 text-lg font-semibold text-gray-600">
-      Thank you for visiting foodePK. Happy Cooking! 🍽️
-    </p>
-  </section>
-  
-
-  <!-- Footer -->
-  <footer class="bg-black text-white">
-    <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-      <div>
-        <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
-          <i class="bi bi-egg-fried text-red-500"></i> foodePk
-        </h2>
-        <p class="text-sm text-gray-400">
-          Discover tasty recipes from around the world. Simple, fast & delicious!
-        </p>
-      </div>
-
-      <div>
-        <h3 class="text-lg font-semibold mb-3 flex items-center gap-2">
-          <i class="bi bi-link-45deg text-red-400"></i> Quick Links
-        </h3>
-        <ul class="space-y-2 text-sm text-gray-300">
-          <li><a href="./index.html" class="hover:text-red-400 flex items-center gap-1"><i class="bi bi-house-door"></i> Home</a></li>
-          <li><a href="./about.html" class="hover:text-red-400 flex items-center gap-1"><i class="bi bi-info-circle"></i> About</a></li>
-          <li><a href="./searchpage.html" class="hover:text-red-400 flex items-center gap-1"><i class="bi bi-search"></i> Search</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="text-lg font-semibold mb-3 flex items-center gap-2">
-          <i class="bi bi-boxes text-red-400"></i> Resources
-        </h3>
-        <ul class="space-y-2 text-sm text-gray-300">
-          <li>
-            <a href="https://www.themealdb.com/" target="_blank" class="hover:text-red-400 flex items-center gap-1">
-              <i class="bi bi-database"></i> TheMealDB API
+          <a href="./index.html">All Recipes</a>
+          <a href="./about.html">About</a>
+          <div class="flex justify-center items-center gap-5 hover:bg-red-600">
+            <a class="px-5 rounded-lg py-2 bg-black hover:bg-red-600 text-white" href="./searchpage.html">
+              Go & Search <i class="bi bi-search ml-2"></i>
             </a>
-          </li>
-          <li>
-            <a href="https://tailwindcss.com" target="_blank" class="hover:text-red-400 flex items-center gap-1">
-              <i class="bi bi-code-slash"></i> Tailwind CSS
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="text-lg font-semibold mb-3 flex items-center gap-2">
-          <i class="bi bi-share-fill text-red-400"></i> Follow Us
-        </h3>
-        <div class="flex space-x-4 text-xl text-gray-300">
-          <a href="#" class="hover:text-blue-500"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="hover:text-sky-400"><i class="bi bi-twitter"></i></a>
-          <a href="#" class="hover:text-pink-500"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="hover:text-red-600"><i class="bi bi-youtube"></i></a>
+          </div>
         </div>
       </div>
-    </div>
+    </nav>
+    <!-- Navbar End -->
 
-    <div class="text-center text-gray-500 text-sm py-4 border-t border-gray-700">
-      © 2025 foodePk. All rights reserved.
-    </div>
-  </footer>
+    <!-- About Section -->
+    <section class="max-w-5xl mx-auto px-6 py-12">
+      <h1 class="text-4xl font-bold mb-6 text-center text-gray-600">About Us</h1>
 
+      <p class="text-lg leading-relaxed mb-6">
+        Welcome to <span class="font-semibold text-black">foodePK</span> — your go-to destination for discovering mouth-watering recipes from around the world. Whether you're a home cook or just someone who loves exploring food online, our platform brings the flavors of every kitchen right to your screen.
+      </p>
 
-<script>
-     function clickButton() {
+      <p class="text-lg leading-relaxed mb-6">
+        We believe that food connects people. That’s why our mission is simple: <span class="italic">"make cooking easy, fun, and accessible for everyone."</span> From traditional dishes to modern fusion meals, we have something for every taste.
+      </p>
+
+      <p class="text-lg leading-relaxed mb-6">
+        Our team continuously explores new meals, collects top-rated recipes, and helps you find exactly what you're craving. Use our powerful search to discover meals by name and get all the details — from ingredients to step-by-step preparation.
+      </p>
+
+      <div class="bg-gray-100 p-6 rounded-xl shadow-md mt-10">
+        <h2 class="text-2xl font-bold text-gray-700 mb-3">Why Choose Us?</h2>
+        <ul class="list-disc list-inside text-gray-700 space-y-2">
+          <li>1000+ Verified and Delicious Recipes</li>
+          <li>Quick and Easy Search Experience</li>
+          <li>Clean, User-Friendly Interface</li>
+          <li>Completely Free to Use</li>
+        </ul>
+      </div>
+
+      <p class="text-center mt-10 text-lg font-semibold text-gray-600">
+        Thank you for visiting foodePK. Happy Cooking! 🍽️
+      </p>
+    </section>
+
+    <!-- Footer Start -->
+    <footer class="bg-black text-white">
+      <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div>
+          <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <i class="bi bi-egg-fried text-red-500"></i> foodePK
+          </h2>
+          <p class="text-sm text-gray-400">
+            Discover tasty recipes from around the world. Simple, fast & delicious!
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-3 flex items-center gap-2">
+            <i class="bi bi-link-45deg text-red-400"></i> Quick Links
+          </h3>
+          <ul class="space-y-2 text-sm text-gray-300">
+            <li><a href="./index.html" class="hover:text-red-400 flex items-center gap-1"><i class="bi bi-house-door"></i> Home</a></li>
+            <li><a href="./about.html" class="hover:text-red-400 flex items-center gap-1"><i class="bi bi-info-circle"></i> About</a></li>
+            <li><a href="./searchpage.html" class="hover:text-red-400 flex items-center gap-1"><i class="bi bi-search"></i> Search</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-3 flex items-center gap-2">
+            <i class="bi bi-boxes text-red-400"></i> Resources
+          </h3>
+          <ul class="space-y-2 text-sm text-gray-300">
+            <li><a href="https://www.themealdb.com/" target="_blank" class="hover:text-red-400 flex items-center gap-1"><i class="bi bi-database"></i> TheMealDB API</a></li>
+            <li><a href="https://tailwindcss.com" target="_blank" class="hover:text-red-400 flex items-center gap-1"><i class="bi bi-code-slash"></i> Tailwind CSS</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-3 flex items-center gap-2">
+            <i class="bi bi-share-fill text-red-400"></i> Follow Us
+          </h3>
+          <div class="flex space-x-4 text-xl text-gray-300">
+            <a href="#" class="hover:text-blue-500"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="hover:text-sky-400"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="hover:text-pink-500"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="hover:text-red-600"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center text-gray-500 text-sm py-4 border-t border-gray-700">
+        © 2025 foodePK. All rights reserved.
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Navbar Toggle Script -->
+    <script>
+      function clickButton() {
         const mobileMenu = document.getElementById("mobile-menu");
-
         mobileMenu.classList.toggle("hidden");
       }
-</script>
-    
-     
+    </script>
   </body>
 </html>
